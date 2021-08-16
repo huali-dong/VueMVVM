@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>测试gitmoji-cli 的用法</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{a.a}}</p>
+    <div>{{b}}</div>
+    <input type="text" v-model="b"/>
+    {{hello}}
+  </div>
+  <script src="./mvvm2.js"></script>
+  <script>
+    let mvvm = new Vue({
+      el: '#app',
+      data: {
+        a: {
+          a: '是a'
+        },
+        b: 2
+      },
+      computed: {
+        hello() {
+          return this.b
+        }
+      }
+    })
+    console.log(mvvm,'vvm');
+  </script>
+</body>
+</html>
